@@ -1,0 +1,21 @@
+﻿<Window x:Class="ZAGS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZAGS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="grid" Margin="27,91,203,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Муж" Binding="{Binding Fio1}"/>
+                <DataGridTextColumn Header="Жена" Binding="{Binding Fio2}"/>
+                <DataGridTextColumn Header="Дата регистрации барка" Binding="{Binding Registration}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Click="Button_Click" Content="Обновить" HorizontalAlignment="Left" Margin="646,151,0,0" VerticalAlignment="Top" Width="82"/>
+        <Button Click="Button_Click_1" Content="Зарегистрировать брак" HorizontalAlignment="Left" Margin="630,0,0,0" VerticalAlignment="Center" Width="144" Height="48"/>
+    </Grid>
+</Window>
